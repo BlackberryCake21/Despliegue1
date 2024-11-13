@@ -2,16 +2,187 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- libreria boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-iconos.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Primerisima Primer Página</title>
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <!-- inicio barra de navegacion -->
 
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="WhatsApp Image 2024-11-12 at 7.09.51 PM.jpeg" alt="" width="40 " height="34">Programadores</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- fin inicio de bara de navegacion -->
+
+
+
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-4 bg-white py-5">
+                <!-- inicio Formulario -->
+                <div class="mb-3">
+                    <label for="staticEmail" class="col-sm-2 col-form-label"></label>
+                    <label for="programa" class="form-label">Nombre programa</label>
+                    <input type="text" class="form-control" id="programa" name="programa" aria-describedby="emailhelp">
+                </div>
+                <div class="mb-3">
+                    <label for="numProgramadores" class="form-label">Numero de programadores</label>
+
+                    <input type="number" class="form-control" id="numProgramadores" name="numProgramadores"> <br>
+                    
+
+                </div>
+                <div class="d-grid gap-2">
+                        
+                    <button  class="btn btn-outline-info" onclick="mostrar()">Enviar <i class="fa-regular fa-paper-plane fa-beat"></i></button>
+                </div><br>
+
+
+
+                <!-- fin Formulario -->
+
+
+            </div>
+            <div class="col-md-8 bg-white py-5">
+                <!-- inicio tabla -->
+                <table class="table table-dark table-hover border-secondary text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nombre programa</th>
+                            <th scope="col">Numero de programadores</th>
+                            <th scope="col">Accion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Java</td>
+                            <td>30</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Php</td>
+                            <td>22</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Python</td>
+                            <td>10</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>C#</td>
+                            <td>16</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>C++</td>
+                            <td>31</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>Ruby</td>
+                            <td>7</td>
+                            <td><a class="btn btn-outline-info" href="#">Editar <i class="fa-solid fa-pencil fa-flip" style="color: #3bc7ff;"></i></a>
+                                <a class="btn btn-outline-danger" href="#"><i class="fa-solid fa-trash-can" style="color: #f10909;"></i></a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+
+                <!-- fin tabla -->
+
+            </div>
+        </div>
+    </div>
+    <!-- codigo js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function mostrar() {
+            Swal.fire({
+                title: "¿Desear guardar los cambios?",
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: "Guardar",
+                denyButtonText: `No guardar`
+              }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                  Swal.fire("¡Guardado!", "", "success");
+                } else if (result.isDenied) {
+                  Swal.fire("Los cambios no fueron guardados", "", "info");
+                }
+              });
+        }
+    </script>
+</body>
 </html>
